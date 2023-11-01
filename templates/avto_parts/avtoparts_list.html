@@ -1,0 +1,17 @@
+{% load static %}
+{% include 'avto_parts/header.html' %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<div class="text-bg-primary p-3">Автозапчасти для внедорожников </div>
+<div class="block-box">
+{% for i in object_list %}
+    <div class="card" style="width: 18rem;">
+      <img src="{{i.image.url}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{i.title}}</h5>
+        <p class="card-text">Цена: {{i.cost}} сом</p>
+        <a href="/avtoparts_detail/{{i.id}}" class="btn btn-primary">Подробнее</a>
+      </div>
+    </div>
+{% endfor %}
+</div>
+{% include 'avto_parts/footer.html' %}

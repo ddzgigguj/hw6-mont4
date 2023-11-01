@@ -1,0 +1,43 @@
+{% load static %}
+{% include 'avto_parts/header.html' %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<div class="text-bg-primary p-3">Детальная информация товара</div>
+  <div class="block-box">
+    <div class="card" style="width: 18rem;">
+      <img src="{{object.image.url}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="title-detail">{{object.title}}</h5>
+        <p class="card-text">{{object.description}}</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Цена: {{object.cost}} сом</li>
+        <li class="list-group-item">Почта: {{object.Email}}</li>
+        <li class="list-group-item">Тел: {{object.tel_number}}</li>
+        <li class="list-group-item">Модель автомобиля: {{object.car_brand}}</li>
+        <li class="list-group-item">Год выпуска: {{object.year_of_release}}</li>
+      </ul>
+<iframe src="{{object.review_of_the_car}}" frameborder="0"></iframe>
+<iframe src="{{object.review_of_auto_parts}}" frameborder="0"></iframe>
+  </div>
+</div>
+<div class="button-style">
+<button class="btn btn-outline-primary"><a href="/avtoparts_detail/{{object.id}}/update/">Изменить</a></button>
+<button class="btn btn-outline-danger"><a href="/avtoparts_detail/{{object.id}}/delete/">Удалить</a></button>
+</div>
+<p>{{object.created_at}}</p>
+<div class="table">
+  <table class="table table-bordered border-primary">
+    <tr>
+      <th>&nbspКомментарий&nbsp</th> <th>&nbspСостояние&nbsp</th> <th>&nbspОценка&nbsp</th> <th>&nbspДата создания&nbsp</th>
+    </tr>
+    {% for i in object.comment_product.all %}
+    <tr>
+      <th>&nbsp{{i.text_comment}}&nbsp</th> <th>&nbsp{{i.сondition}}&nbsp</th> <th>&nbsp{{i.rate_stars}}&nbsp</th> <th>&nbsp{{i.created_at}}&nbsp</th>
+    </tr>
+    {% endfor %}
+  </table>
+  <div class="add-comment">
+    <button type="button" class="btn btn-black"><a href="/review_form/">Добавить комментарий</a></button>
+  </div>
+</div>
+{% include 'avto_parts/footer.html' %}

@@ -1,0 +1,12 @@
+{% include 'avto_parts/header.html' %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<form method="post" enctype="multipart/form-data" class="ui-form">
+    {% csrf_token %}
+    {{ form.as_p }}
+<div class="form-row">
+<button type="submit">Изменить</button>
+<button type="reset"><a href="/avtoparts_list/">Отмена</a></button>
+</div>
+</form>
+{% include 'avto_parts/footer.html' %}

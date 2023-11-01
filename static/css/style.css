@@ -1,0 +1,106 @@
+.block-box {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.title-detail{
+    text-align: center;
+    color: red;
+}
+
+.title {
+    color: red;
+}
+
+.container-fluid {
+    background-color: white;
+}
+
+.text-bg-primary{
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.button-style {
+    display: flex;
+    justify-content: center;
+    gap: 65px;
+    margin-top: 20px;
+}
+.button-style a {
+    color: #1b1b1b;
+    text-decoration: none;
+    font-size: 19px;
+    font-style: italic;
+    font-weight: 700;
+}
+
+body {
+   background: url("/static/photo/Road.jpg") fixed;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   font-family: 'Times New Roman', sans-serif;
+}
+.ui-form {
+   max-width: 400px;
+   padding: 50px 30px 30px;
+   margin: 10px 130px 30px;
+   background: url("/static/photo/fon.jpg") fixed;
+   text-transform: uppercase;
+}
+.ui-form h3 {
+   position: relative;
+   z-index: 5;
+   margin: 0 0 40px;
+   text-align: center;
+   color: #264b5d;
+   font-size: 30px;
+   font-weight: normal;
+}
+
+.box {
+    display: flex;
+}
+
+.add-comment{
+    display: flex;
+    justify-content: center;
+}
+.add-comment a {
+    color: black;
+    text-decoration: none;
+    font-size: 19px;
+    border-radius: 15px;
+    font-weight: 600;
+    background-color: white;
+    font-style: italic;
+    font-family: "Palatino Linotype";
+}
+
+.delete-card {
+    position: fixed; top: 40%; left: 40%;
+    text-align: center;
+    font-size: 55px;
+    background: url("/static/photo/Kartinki.jpg");
+    font-family:  "Palatino Linotype";
+    border-radius: 10px;
+}
+.delete-card b {
+    color: white;
+    font-size: 20px;
+    padding: 10px 10px 10px;
+}
+.delete-card a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 10px 10px 10px;
+}
+.card-title b {
+    font-size: 25px;
+    padding: 10px 10px 10px;
+}

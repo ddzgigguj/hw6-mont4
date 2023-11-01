@@ -1,0 +1,16 @@
+{% include 'avto_parts/header.html' %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+<form method="POST" enctype="multipart/form-data">
+<div class="delete-card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title"><b>Вы действительно хотите удалить товар?</b></h5>
+    {% csrf_token %}
+    <div class="delete-comment">
+      <button type="submit" class="btn btn-success"><b>Да</b></button>
+      <button class="btn btn-danger"><a href="/avtoparts_list/">Нет</a></button>
+    </div>
+  </div>
+</div>
+</form>

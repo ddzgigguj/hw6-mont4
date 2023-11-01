@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center>
+    {% for i in object_list %}
+    <h1>{{i.title_name}}</h1>
+    <img src="{{i.image}}" alt="" width="400" height="400">
+    <p>{{i.price}}</p>
+    <p>{{i.description}}</p>
+    <a href="{{i.title_url}}">{{i.title_url}}</a>
+    {% endfor %}
+</center>
+</body>
+</html>
